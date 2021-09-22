@@ -12,7 +12,7 @@ export default function Navbar(props) {
           {/* <Link className="navbar-brand" to="/">
             {props.title}
           </Link> */}
-          <a className="navbar-brand" href="">
+          <a className="navbar-brand" href="#">
             {props.title}
           </a>
           <button
@@ -32,7 +32,7 @@ export default function Navbar(props) {
                 {/* <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link> */}
-                <a className="nav-link active" aria-current="page" href="">
+                <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
@@ -45,14 +45,21 @@ export default function Navbar(props) {
                 </a> */}
               </li>
             </ul>
-            <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+            <div
+              className={`form-check form-switch text-${
+                props.mode === "light" ? "dark" : "light"
+              }`}
+            >
               <input
                 className="form-check-input"
                 type="checkbox"
                 id="flexSwitchCheckDefault"
                 onClick={props.toggleMode}
               />
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
                 Enable Dark Mode
               </label>
             </div>
